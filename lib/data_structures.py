@@ -39,10 +39,14 @@ def get_spicy_food_by_cuisine(spicy_foods, cuisine):
             return food
 
 def print_spiciest_foods(spicy_foods):
-    for food in spicy_foods:
-        if food["heat_level"] > 5:
-            print(food["name"] + " (" + food["cuisine"] +  ") " + "| Heat Level: " + ("🌶" * food["heat_level"]))
-    # This could be rewritten to use already existing functions
+    # Long solution
+    # for food in spicy_foods:
+    #     if food["heat_level"] > 5:
+    #         print(food["name"] + " (" + food["cuisine"] +  ") " + "| Heat Level: " + ("🌶" * food["heat_level"]))
+
+    # Shorter solution - using preexisting functions!
+    spiciest_foods = get_spiciest_foods(spicy_foods)
+    print_spicy_foods(spiciest_foods)
 
 def get_average_heat_level(spicy_foods):
     heat = []
